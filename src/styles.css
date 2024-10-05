@@ -168,10 +168,9 @@ header > button:hover {
     background-color: white;
     width: 70%; 
     border-radius: 15px;
-    margin: 0 auto;
+    margin: 2rem auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 1rem;
-    margin-top: 2rem;
 }
 
 .services-home {
@@ -346,4 +345,34 @@ header > button:hover {
     background-color: white;
     color: var(--main-1);
     cursor: pointer;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: var(--hero-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 4rem 4rem;
+}
+
+footer h3 {
+    color: var(--main-1)
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer > div:last-child {
+    display: flex;
+    gap: 50px;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'pluto-black';
+    src: url("./fonts/pluto-font-family/HvDTrial_Pluto-CondBlack-BF6486959ed9374.otf");
+}
+
+@font-face {
+    font-family: 'pluto-regular';
+    src: url("./fonts/pluto-font-family/HvDTrial_Pluto-CondRegular-BF6486959e6db70.otf");
+}
+
+:root {
+    --hero-color: #fff0e9;
+    --main-1: #ee5457;
+}
+
+body{
+    font-family: pluto-regular, system-ui;
+}
+
+h1, h2, h3, h4 {
+    font-family: pluto-black, system-ui;
+}
+
+header {
+    background-color: var(--hero-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    font-family: pluto-black, system-ui;
+    font-size: 2rem;
+}
+
+nav button {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px;
+    font-family: pluto-regular, sans-serif;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+nav button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-1);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+nav button:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+header > button {
+    font-family: pluto-regular, system-ui;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border-radius: 2.5rem;
+    padding: 0.5rem 1rem;
+    border-color: var(--main-1);
+    border-style: solid;
+}
+
+header > button:hover {
+    color: white;
+    background-color: var(--main-1);
+    cursor: pointer;
+}
+
+.hero-container {
+    background-color: var(--hero-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hero-text hero-img"
+    "hero-sub-text hero-img"
+    "hero-buttons hero-img";
+}
+
+.hero-title {
+    grid-area: hero-text;
+    color: var(--main-1);
+}
+
+img:not(.hero-img) {
+    width: 100px;
+}   
+
+.hero-img {
+    grid-area: hero-img;
+    width: 100px;
+}
+
+.hero-span {
+    grid-area: hero-sub-text;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons-span {
+    grid-area: hero-buttons;
+}

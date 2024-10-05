@@ -26,13 +26,14 @@ const getHero = function() {
     buyBtn.textContent = "Buy Now";
 
     const howToOrderSpan = document.createElement("span");
-    const howToOrderBtn = document.createElement("button");
+    const howToOrderBtn = document.createElement("span");
     const howToOrderText = document.createElement("p");
 
-    howToOrderBtn.innerHTML = "play";
+    howToOrderBtn.innerHTML = `<i class="fa-regular fa-circle-play"></i>`;
     howToOrderText.textContent = "How to Order";
     howToOrderSpan.appendChild(howToOrderBtn);
     howToOrderSpan.appendChild(howToOrderText);
+    howToOrderSpan.classList.add("order-span");
 
     buttonsSpan.appendChild(buyBtn);
     buttonsSpan.appendChild(howToOrderSpan);

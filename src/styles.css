@@ -20,6 +20,7 @@
 
 body{
     font-family: pluto-regular, system-ui;
+    font-size: 1.2rem;
 }
 
 h1, h2, h3, h4 {
@@ -87,6 +88,8 @@ header > button:hover {
     cursor: pointer;
 }
 
+/* Hero Styles */
+
 .hero-container {
     background-color: var(--hero-color);
     display: grid;
@@ -96,29 +99,251 @@ header > button:hover {
     "hero-text hero-img"
     "hero-sub-text hero-img"
     "hero-buttons hero-img";
+    align-items: start;
+    padding: 0 5rem;
 }
 
 .hero-title {
     grid-area: hero-text;
+    font-size: 4rem;
     color: var(--main-1);
 }
 
-img:not(.hero-img) {
-    width: 100px;
-}   
-
 .hero-img {
     grid-area: hero-img;
-    width: 100px;
+    width: 100%;
 }
 
 .hero-span {
     grid-area: hero-sub-text;
+    font-size: 1.5rem;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-content: start;
+    align-items: center;  
+    gap: 10px; 
 }
+
+.hero-span > img {
+    width: 90px;
+}   
 
 .buttons-span {
     grid-area: hero-buttons;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons-span > button {
+    font-family: pluto-regular, system-ui;
+    font-size: 1.5rem;
+    background-color: var(--main-1);
+    color: white;
+    border-radius: 2.5rem;
+    padding: 0.5rem 1rem;
+    border-color: var(--main-1);
+    border-style: solid;
+}
+
+.buttons-span > button:hover {
+    background-color: white;
+    color: var(--main-1);
+    cursor: pointer;
+}
+
+.order-span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.order-span i {
+    font-size: 2.5rem;
+}
+
+/* Services Styles */
+
+.services-div {
+    background-color: white;
+    width: 70%; 
+    border-radius: 15px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.services-home {
+    position: relative;
+    top: -100px;
+}
+
+.services-div > ul {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.services-div li {
+    max-width: 200px;
+}
+
+.services-div p {
+    color: #9c5959;
+    padding-left: 10px;
+}
+
+/* Offers Styles */
+
+.offers-div {
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "offer1 offer1 offer2"
+        "offer3 offer3 offer4"
+        "offer5 offer5 offer5";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.offers-div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5rem;
+}
+
+.offers-div div{
+    height: 350px;
+}
+
+.offer-1 {
+    grid-area: offer1;
+}
+.offer-2 {
+    grid-area: offer2;
+}
+.offer-3 {
+    grid-area: offer3;
+}
+.offer-4 {
+    grid-area: offer4;
+}
+.offer-5 {
+    grid-area: offer5;
+}
+
+.offer-5 img {
+    object-fit: cover;
+}
+
+/* Menu Styles */
+
+.menu-div {
+    padding: 0 4rem;
+}
+
+.highlight {
+    color: var(--main-1);
+}
+
+.best-items-header, .menu-items-header {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.menu-items-header {
+    margin-top: 4rem;
+}
+
+.best-items-header p, .menu-items-header p {
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.best-items-header h2, .menu-items-header h2 {
+    font-size: 2rem;
+}
+
+.best-items-box {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.best-items-box img {
+    width: 200px;
+    margin-bottom: 0.5rem;
+}
+
+.best-items-box p, .best-items-box h3 {
+    cursor: pointer;
+}
+
+.best-items-box p:hover {
+    color: var(--main-1);
+}
+
+.menu-items-box {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--hero-color);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+}
+
+.menu-card div:first-child {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+
+.menu-items-box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-card div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-card div button {
+    background-color: var(--main-1);
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 2.5rem;
+    border: 0;
+}
+
+.menu-card div button:hover {
+    background-color: white;
+    color: var(--main-1);
+    cursor: pointer;
 }
